@@ -6,6 +6,7 @@ Enter `rainbow` _string_ to formant _string_ and print the result to the console
 
 ### Setup
 - Ensure `rainbow.py` and `usage' are in the same directory
+- Edit the `SCRIPT_DIR` variable at the top of the ```Rainbow()``` class in `rainbow.py`
 - Create an alias, for example in `~/.bashrc`
 ```sh 
 alias rainbow="python full_path_to_rainbow.py"
