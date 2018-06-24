@@ -14,7 +14,7 @@ class Rainbow:
 	SCRIPT_NAME = 'rainbow.py'
 	# Directory containing rainbow.py and usage
 	# ~~~~ To Edit ~~~~~~
-	SCRIPT_DIR = "/home/pip/python_projects/rainbow"
+	SCRIPT_DIR = "/home/username/example_directory"
 	# ~~~~ To Edit ~~~~~~
 	# ANSI codes
 	# Return cursor to (0,0)
