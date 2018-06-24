@@ -1,0 +1,53 @@
+RAINBOW(1)
+
+NAME
+	rainbow - Format and print text with fun colours
+
+OPTIONS
+	
+	-b, --blinking
+		Make every other character blink. Note: Frequency is reduced when used in conjunction
+		with --decoration.
+	
+	-bg, --background
+		Apply background colouring to the text.
+
+	-bf, --black-foreground
+		By default, black foreground (text) is not used. This option changes this behaviour.
+		Recommended when using light terminal themes.
+
+	--clear
+		Clear the console window before printing.
+
+	-d, --dim
+		Use ordinary colouring. By default, 'bright' colours are used.
+
+	-dec, --decoration
+		Apply decorations (regular, bold, italic and underlined) to the text.
+
+	-f, --file \x1B[3mfile\x1B[23m
+		Format and print a text file. \x1B[3mfile\x1B[23m should be a full path name or a path name 
+		relative to the current working directory.
+
+	-fg, --fg
+		Apply foreground colouring to the text. This is the most customary option.
+
+	-h, --help
+		Display this message.
+
+	--home
+		Move the cursor to the top left-hand corner of the screen before printing (this should really 
+		only be used in conjunction with --clear).
+
+	-nwf, --no-white-foreground
+		Do \x1B[3mnot\x1B[23m use white as a foreground (text). Recommended when using light terminal themes.
+
+	-r, --randomise
+		Randomise the order in which formatting is applied. Otherwise the default ordering is used:
+		(Black,) Red, Green, Yellow, Blue, Magenta, Cyan, White for foreground and background colours,
+		and Regular, Bold, Italic, Underlined for decorations.
+		
+	\x1B[3mstring\x1B[23m
+		Format and print \x1B[3mstring\x1B[23m. If used, this must be the \x1B[3mfirst\x1B[23m argument.
+		If \x1B[3mstring\x1B[23m contains spaces, it must be placed in single or double quotes. Note
+		that any escape codes here will be ignored.
