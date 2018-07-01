@@ -4,17 +4,21 @@ NAME
 	rainbow - Format and print text with fun colours
 
 OPTIONS
-	
+
+	-a, --all
+		Turn on most colours and decorations, and randomise. Equivalent to -b -bg -bf -dec -fg -r	
+
 	-b, --blinking
-		Make every other character blink. Note: Frequency is reduced when used in conjunction
-		with --decoration.
+		Make every other character blink. This is \x1B[3mnot\x1B[23m compatible with the -bg option.
+		Note: The occurrence of blinking characters is reduced when used in conjunction with -dec.
 	
 	-bg, --background
-		Apply background colouring to the text.
+		Apply background colouring to the text. By default, the foreground text will be white,
+		although this is changed if -fg, -bf or -nwf is used.
 
 	-bf, --black-foreground
-		By default, black foreground (text) is not used. This option changes this behaviour.
-		Recommended when using light terminal themes.
+		By default, black foreground (text) is not used with the -fg option.
+		This option changes this behaviour. Recommended when using light terminal themes.
 
 	--clear
 		Clear the console window before printing.
@@ -40,7 +44,7 @@ OPTIONS
 		only be used in conjunction with --clear).
 
 	-nwf, --no-white-foreground
-		Do \x1B[3mnot\x1B[23m use white as a foreground (text). Recommended when using light terminal themes.
+		Do \x1B[3mnot\x1B[23m use white as a foreground (text) colour. Recommended when using light terminal themes.
 
 	-r, --randomise
 		Randomise the order in which formatting is applied. Otherwise the default ordering is used:
@@ -51,3 +55,7 @@ OPTIONS
 		Format and print \x1B[3mstring\x1B[23m. If used, this must be the \x1B[3mfirst\x1B[23m argument.
 		If \x1B[3mstring\x1B[23m contains spaces, it must be placed in single or double quotes. Note
 		that any escape codes here will be ignored.
+
+	-w, --words
+		Format text by word instead of character.
+		
